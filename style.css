@@ -1,0 +1,93 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.Odin-Title {
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+a {
+    color: #007bff; /* Example accent color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif; /* Or your preferred sans-serif font */
+    line-height: 1.6;
+    margin: 20px; /* Gives some breathing room */
+    background-color: #ffffff;
+    color: #333; /* Dark gray text for readability */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #007bff; /* An accent color - could be any color you like */
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%; /* Ensures the image scales nicely */
+    height: auto;
+    display: block; /* Prevents text from wrapping awkwardly around the image */
+    margin: 0 auto; /* Centers the image */
+    border-radius: 5px; /* Adds a subtle rounded corner */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gives the image some depth */
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin-left: 20px; /* Indents the list slightly */
+}
+
+li {
+    position: relative; /* Allows us to position pseudo-elements for custom bullets */
+    padding-left: 30px; /* Adds space for the custom bullet */
+    margin-bottom: 10px;
+}
+
+/* Custom bullet points for the lists */
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px; /* Adjust to vertically align the bullet */
+    width: 8px;
+    height: 8px;
+    background-color: #007bff; /* Matches the accent color */
+    border-radius: 50%; /* Makes it a circle */
+}
+
+ol {
+    counter-reset: section;
+}
+
+ol li::before {
+    counter-increment: section;
+    content: counter(section) "."; /* Adds numbers to the ordered list */
+    background-color: transparent; /* Removes the circle for the numbered list */
+    color: #007bff; /* Matches the accent color */
+    font-weight: bold;
+    left: -5px; /* Adjusts the position of the number */
+}
